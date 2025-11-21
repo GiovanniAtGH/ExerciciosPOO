@@ -1,0 +1,24 @@
+public class ComissaoSemPOO {
+
+    public static double calcularJunior(double vendas) {
+        return vendas * 0.05;
+    }
+
+    public static double calcularSenior(double vendas) {
+        double total = vendas * 0.08;
+        if (vendas > 10000) {
+            total += 500;
+        }
+        return total;
+    }
+
+    public static double calcularGerente(double vendas) {
+        return 3000 + (vendas * 0.02);
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Ana: " + calcularJunior(8000));
+        System.out.println("Carlos: " + calcularSenior(12000));
+        System.out.println("Marcos: " + calcularGerente(50000));
+    }
+}
