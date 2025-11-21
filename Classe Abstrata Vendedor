@@ -1,0 +1,19 @@
+public abstract class Vendedor {
+    private String nome;
+    private double vendas;
+
+    public Vendedor(String nome, double vendas) {
+        this.nome = nome;
+        this.vendas = vendas;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public double getVendas() {
+        return vendas;
+    }
+
+    public abstract double calcularComissao();
+}
