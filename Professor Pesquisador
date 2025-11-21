@@ -1,0 +1,13 @@
+public class ProfessorPesquisador extends Professor {
+    private int projetos;
+
+    public ProfessorPesquisador(String nome, int projetos) {
+        super(nome);
+        this.projetos = projetos;
+    }
+
+    @Override
+    public double calcularPagamento() {
+        return 5000 + (projetos * 2000);
+    }
+}
