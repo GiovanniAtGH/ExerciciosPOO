@@ -1,0 +1,10 @@
+public class GerenteComercial extends Vendedor {
+    public GerenteComercial(String nome, double vendas) {
+        super(nome, vendas);
+    }
+
+    @Override
+    public double calcularComissao() {
+        return 3000 + (getVendas() * 0.02);
+    }
+}
