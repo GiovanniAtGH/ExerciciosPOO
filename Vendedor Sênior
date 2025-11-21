@@ -1,0 +1,18 @@
+public class VendedorSenior extends Vendedor {
+    private double meta = 10000; // meta oficial
+
+    public VendedorSenior(String nome, double vendas) {
+        super(nome, vendas);
+    }
+
+    @Override
+    public double calcularComissao() {
+        double base = getVendas() * 0.08;
+        double bonus = 0;
+
+        if (getVendas() > meta) {
+            bonus = 500;
+        }
+        return base + bonus;
+    }
+}
