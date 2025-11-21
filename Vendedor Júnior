@@ -1,0 +1,10 @@
+public class VendedorJunior extends Vendedor {
+    public VendedorJunior(String nome, double vendas) {
+        super(nome, vendas);
+    }
+
+    @Override
+    public double calcularComissao() {
+        return getVendas() * 0.05; // 5%
+    }
+}
