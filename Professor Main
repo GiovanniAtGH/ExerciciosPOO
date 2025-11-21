@@ -1,0 +1,17 @@
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Professor> professores = new ArrayList<>();
+
+        professores.add(new ProfessorHorista("João", 120));
+        professores.add(new ProfessorDE("Maria", "doutor"));
+        professores.add(new ProfessorPesquisador("Carlos", 3));
+
+        for (Professor p : professores) {
+            System.out.println(
+                p.getNome() + " - Pagamento: R$ " + p.calcularPagamento()
+            );
+        }
+    }
+}
