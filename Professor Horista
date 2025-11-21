@@ -1,0 +1,13 @@
+public class ProfessorHorista extends Professor {
+    private int horas;
+
+    public ProfessorHorista(String nome, int horas) {
+        super(nome);
+        this.horas = Math.min(horas, 160); // limite de 160h
+    }
+
+    @Override
+    public double calcularPagamento() {
+        return horas * 85.0;
+    }
+}
