@@ -1,0 +1,17 @@
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Vendedor> vendedores = new ArrayList<>();
+
+        vendedores.add(new VendedorJunior("Ana", 8000));
+        vendedores.add(new VendedorSenior("Carlos", 12000));
+        vendedores.add(new GerenteComercial("Marcos", 50000));
+
+        for (Vendedor v : vendedores) {
+            System.out.println(
+                v.getNome() + " - Comissão: R$ " + v.calcularComissao()
+            );
+        }
+    }
+}
