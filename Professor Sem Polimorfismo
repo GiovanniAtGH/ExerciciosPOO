@@ -1,0 +1,20 @@
+public class PagamentoSemPOO {
+    public static double calcularHorista(int horas) {
+        if (horas > 160) horas = 160;
+        return horas * 85;
+    }
+
+    public static double calcularDE(boolean doutor) {
+        return 8000 + 1500;
+    }
+
+    public static double calcularPesquisador(int projetos) {
+        return 5000 + (projetos * 2000);
+    }
+
+    public static void main(String[] args) {
+        System.out.println("João: " + calcularHorista(120));
+        System.out.println("Maria: " + calcularDE(true));
+        System.out.println("Carlos: " + calcularPesquisador(3));
+    }
+}
