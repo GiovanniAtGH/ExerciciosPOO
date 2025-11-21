@@ -1,0 +1,14 @@
+public class ProfessorDE extends Professor {
+    private String titulacao; // mestre ou doutor
+
+    public ProfessorDE(String nome, String titulacao) {
+        super(nome);
+        this.titulacao = titulacao;
+    }
+
+    @Override
+    public double calcularPagamento() {
+        double adicional = titulacao.equalsIgnoreCase("doutor") ? 1500 : 1500;
+        return 8000 + adicional;
+    }
+}
