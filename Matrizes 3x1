@@ -1,0 +1,5 @@
+public static void subtrairMatrizes(double[][] m1, double[][] m2, double[][] resultado) {
+    for (int i = 0; i < 3; i++) {
+        resultado[i][0] = m1[i][0] - m2[i][0];
+    }
+}
